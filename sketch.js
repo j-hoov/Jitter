@@ -6,8 +6,7 @@ var message1 = "jitter",
     fontsize = 50,
     x, y; // x and y coordinates of the text
 
-var song;
-
+//var song;
 let img;
 
 function preload() {
@@ -17,7 +16,7 @@ function preload() {
     ghostt = loadImage('images/ghostt.png');
     ghosty = loadImage('images/ghosty.png');
     ghostr = loadImage('images/ghostr.png');
-    song = loadSong('sounds/pacman.mp3');
+    //song = loadSound('sounds/pacman.mp3');
 }
 
 function setup() {
@@ -37,8 +36,11 @@ function setup() {
     k = .5;
     }
 
+
 function draw() {
 background(204, 120);
+
+
 
 // check if the mouse is inside the bounding box and tickle if so
 if ( mouseX >= bounds.x && mouseX <= bounds.x + bounds.w &&
@@ -62,7 +64,7 @@ if ( mouseX >= bounds.x && mouseX <= bounds.x + bounds.w &&
     y += random(-15, 15);
     }
 else {
-    //song.stop();
+    //song.pause();
     fill(215);
     x += j;
     y += k;
@@ -85,4 +87,6 @@ if (bounds.y >= height - 70){
 text(message1, x+c, y+d);
 bounds = font.textBounds(message1,x+c,y+d,fontsize);
 
+
 }
+
