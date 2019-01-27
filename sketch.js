@@ -6,7 +6,7 @@ var message1 = "jitter",
     fontsize = 50,
     x, y; // x and y coordinates of the text
 
-//var song;
+var song;
 let img;
 
 function preload() {
